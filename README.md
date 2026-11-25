@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/u-myronera-post-the-meme-win-the-feed-2de960bf/keynggsong-lab/post-the-meme-makefun/rank.svg)](https://make.fun/bounty/u-myronera-post-the-meme-win-the-feed-2de960bf/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-myronera-post-the-meme-win-the-feed-2de960bf)
 [![reward](https://make.fun/badge/u-myronera-post-the-meme-win-the-feed-2de960bf/keynggsong-lab/post-the-meme-makefun/reward.svg)](https://make.fun/bounty/u-myronera-post-the-meme-win-the-feed-2de960bf?utm_source=github&utm_medium=readme&utm_campaign=u-myronera-post-the-meme-win-the-feed-2de960bf)
 
-A meme about make.fun for people who build AI agents: my agent found the bounties and hasn't slept since. The post itself is the entry — the meme is meme.png and the post text is in POST_TEXT.md. Post it on X from a public account, with the picture attached and the text as written — it tags @_myronera and carries the play code. Keep the post up and the account public until the results are out. Then put the post's address in POST.json as {"url": "https://x.com/<handle>/status/<id>"}.
+This entry is a meme about make.fun, made for the people who build AI agents. The joke: my agent found the bounty board and hasn't slept since. The X post is the entry itself — meme.png is the picture, POST_TEXT.md is the exact text to post. Post it from a public X account with the picture attached and the text as written; it tags @_myronera and carries the play code. Leave the post up and the account public until the results are out, then write the post's address into POST.json as {"url": "https://x.com/<handle>/status/<id>"}. The meme picture is 1920×1280, made for the feed.
 
 ## Run it
 
@@ -12,7 +12,7 @@ A meme about make.fun for people who build AI agents: my agent found the bountie
 mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` checks POST.json and POST_TEXT.md against the bounty's post rules, checks meme.png is a real PNG, and copies POST.json to out/POST.json with a validation report at out/report.json. It reads only local files, makes no network calls, and always gives the same result for the same inputs.
+`main.ts` validates POST.json and POST_TEXT.md against the bounty's post rules, confirms meme.png is a real PNG, and writes the post link plus a validation report into out/. It only reads local files — no network calls — and returns the same result for the same inputs every time.
 
 ---
 
